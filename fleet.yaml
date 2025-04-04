@@ -1,0 +1,30 @@
+defaultNamespace: observe
+releases:
+  - name: observe-agent
+    chart: 
+      repo: "https://observeinc.github.io/helm-charts"
+      name: "agent"
+    values:
+      agent:
+        selfMonitor:
+          enabled: false
+      application:
+        prometheusScrape:
+          enabled: true
+      cluster:
+        events:
+          enabled: true
+        metrics:
+          enabled: true
+        name: observe-agent-monitored-cluster
+      node:
+        containers:
+          logs:
+            enabled: true
+          metrics:
+            enabled: true
+      observe:
+        collectionEndpoint:
+          value: ${OBSERVE_COLLECTION_ENDPOINT}
+        token:
+          create: false
