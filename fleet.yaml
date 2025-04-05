@@ -37,3 +37,38 @@ releases:
           value: ${OBSERVE_COLLECTION_ENDPOINT}
         token:
           create: false
+    # targetCustomizations (or “multi-target”) let you override values
+    # for specific clusters by label matching
+    targetCustomizations:
+      # For cluster #1
+      - name: cluster-1
+        clusterSelector:
+          matchLabels:
+            env: "dev1"
+        values:
+          cluster:
+            name: "observe-agent-monitored-cluster-1"
+      # For cluster #2
+      - name: cluster-2
+        clusterSelector:
+          matchLabels:
+            env: "dev2"
+        values:
+          cluster:
+            name: "observe-agent-monitored-cluster-2"
+      # For cluster #3
+      - name: cluster-3
+        clusterSelector:
+          matchLabels:
+            env: "dev3"
+        values:
+          cluster:
+            name: "observe-agent-monitored-cluster-3"
+      # For cluster #4
+      - name: cluster-4
+        clusterSelector:
+          matchLabels:
+            env: "dev4"
+        values:
+          cluster:
+            name: "observe-agent-monitored-cluster-4"
