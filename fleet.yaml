@@ -43,14 +43,14 @@ releases:
             enabled: true
           metrics:
             enabled: true
-      forwarder:
-        enabled: true
-        traces:
+        forwarder:
           enabled: true
-        metrics:
-          enabled: true
-        logs:
-          enabled: true
+          traces:
+            enabled: true
+          metrics:
+            enabled: true
+          logs:
+            enabled: true
       observe:
         # We no longer hardcode .collectionEndpoint.value here,
         # because Fleet will fill it from the secret.
