@@ -4,6 +4,7 @@ helm:
   chart: "agent"                    # chart name
   repo: "https://observeinc.github.io/helm-charts"
   # version: "0.51.1"
+  releaseName: observe-agent
 
   # Enable or confirm "disablePreProcess" is false so Fleet processes templating.
   # (This is usually the default, but some Fleet versions require you to specify.)
