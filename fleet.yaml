@@ -37,7 +37,7 @@ helm:
           enabled: true
         metrics:
           enabled: true
-          outputFormat: otel
+          outputFormat: "otel"
         logs:
           enabled: true
     observe:
